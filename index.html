@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>html-ko</title>
+  <link rel="stylesheet" href="./main.css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="calendar">
+      <div class="header">
+        <h1>Date Picker</h1>
+        <!-- <button type="button" class="today-btn left-arrow">&lt;</button> -->
+        <input type="text" class="show-checked-date" max="9999-12-31" readonly placeholder="Select date" />
+        <div class="calendar-nav">
+          <span type="button" class="nav-btn left-arrow"></span>
+          <div class="cur-month-year-box">
+            <p class="cur-month"></p>
+            <span class="cur-year"></span>
+          </div>
+          <span type="button" class="nav-btn right-arrow"></span>
+        </div>
+      </div>
+
+      <div class="calendar-grid">
+        <div class="days grid">
+          <div class="day">SUN</div>
+          <div class="day">MON</div>
+          <div class="day">TUE</div>
+          <div class="day">WED</div>
+          <div class="day">THU</div>
+          <div class="day">FRI</div>
+          <div class="day">SAT</div>
+        </div>
+        <div class="dates grid"></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./app.js"></script>
+</body>
+
+</html>

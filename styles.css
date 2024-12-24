@@ -1,0 +1,157 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-gray-200);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--color-brown-400);
+  font-weight: 300;
+  margin: 0.5rem 0 2rem 0;
+  pointer-events: none;
+}
+
+.show-checked-date {
+  all: unset;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  outline: 1px solid var(--color-gray-600);
+}
+
+.show-checked-date:hover {
+  outline: 0.2rem solid var(--color-blue-500);
+}
+
+.calendar-nav {
+  margin-top: 1rem;
+  background: var(--color-green-400);
+  border-radius: 10px 10px 0 0;
+
+  height: 10rem;
+  color: var(--color-white);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cur-month-year-box {
+  text-align: center;
+}
+
+.cur-month {
+  font-size: 2.5rem;
+  margin: 0.5rem;
+  pointer-events: none;
+}
+
+.cur-year {
+  font-size: 1.8rem;
+  pointer-events: none;
+}
+
+
+.nav-btn {
+  display: inline;
+  all: unset;
+  cursor: pointer;
+
+  width: 0;
+  height: 0;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+}
+
+.left-arrow {
+  border-right: 1rem solid var(--color-white);
+
+}
+
+.right-arrow {
+  border-left: 1rem solid var(--color-white);
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.calendar-grid {
+  background-color: var(--color-white);
+  border-radius: 0 0 10px 10px;
+  font-size: 1.5rem;
+}
+
+.days {
+  color: var(--color-gray-600);
+  display: flex;
+  margin-bottom: -3rem;
+}
+
+.day {
+  padding: 2rem;
+  width: calc(100% / 7);
+}
+
+.day:nth-child(7n + 1),
+.date:nth-child(7n + 1){
+  color: var(--color-red-500);
+}
+
+.day:nth-child(7n),
+.date:nth-child(7n){
+  color: var(--color-blue-500);
+}
+
+.date {
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.date:hover::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--color-green-400);
+  z-index: -1;
+}
+.date:hover {
+  color: var(--color-white);
+}
+.date.selected {
+  /* border: 2px solid var(--color-green-400); */
+  background-color: var(--color-green-400);
+  border: 1px solid var(--color-green-400);
+  border-radius: 50%;
+}
+.date .other {
+  color: var(--color-gray-400);
+  /* 회색 적용 */
+  pointer-events: none;
+  /* 클릭 비활성화 (선택 사항) */
+}

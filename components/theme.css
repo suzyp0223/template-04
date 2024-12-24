@@ -1,0 +1,26 @@
+/* Theme */
+:root {
+  --color-back: #181818;
+  --color-white: #FFFFFF;
+  --color-gray-200: #f2f4f6;
+  --color-gray-600: #AAA9A9;
+  --color-blue-500: #0096E4;
+  --color-red-500: #E52330;
+  --color-green-400: #44c479;
+  --color-brown-400: #a45a4a;
+
+  --base-size: 10px;
+  --font-family: 'Noto Sans KR', sans-serif;
+  --font-weight: 300;
+
+}
+
+html {
+  font-size: var(--base-size);
+  font-weight: var(--font-weight);
+}
+
+body {
+  color: var(--color-black);
+  background: var(--color-white);
+}
