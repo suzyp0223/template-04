@@ -1,15 +1,3 @@
-// https://gurtn.tistory.com/54
-
-// https://bigtop.tistory.com/65
-// https://velog.io/@jhyun_k/%EB%B0%94%EB%8B%90%EB%9D%BC-JS%EB%A1%9C-%EC%BA%98%EB%A6%B0%EB%8D%94-%EB%A7%8C%EB%93%A4%EA%B8%B0
-// https://www.youtube.com/watch?v=jFmcH5GVRs4
-
-// https://cyjcyj.tistory.com/138
-
-
-// https://poiemaweb.notion.site/4-Calendar-DatePicker-123833ba37a046978a29a53d4344e0af
-// https://yeongminkim.notion.site/Javascript-1-a195109771a04727901548be5fdd4499
-// https://yeongminkim.notion.site/Javascript-2-243fdd6ff0144f679cde4a58885de36f
 export let date = new Date();
 
 export const Calendar = () => {
@@ -18,12 +6,12 @@ export const Calendar = () => {
   const date = new Date();
   const currentYear = date.getFullYear();
   const currentMonth = date.getMonth();
-  const options = { month: 'long' }; // 'long' 옵션을 사용하면 영어로 된 달 이름을 얻음.
+  const options = { month: 'long' };
   const monthName = new Intl.DateTimeFormat('en-US', options).format(date);
 
   // 지난해,달 마지막과 이번해,달 마지막
-  const preLast = new Date(currentYear, currentMonth, 0); // 2023-12-31
-  const thisLast = new Date(currentYear, currentMonth + 1, 0); // 2024-1-31
+  const preLast = new Date(currentYear, currentMonth, 0);
+  const thisLast = new Date(currentYear, currentMonth + 1, 0);
 
   const PLDate = preLast.getDate();
   const PLDay = preLast.getDay();
